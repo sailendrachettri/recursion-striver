@@ -6,10 +6,8 @@ Author: Sailendra */
 using namespace std;
 
 void print_n_times(int n){
-    static int i = 1;
-    if(i>n) return;
-    cout<<i<<endl;
-    i++;
+    if(n<1) return;
+    cout<<n--<<endl;
     print_n_times(n);
 }
 
