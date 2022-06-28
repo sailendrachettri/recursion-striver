@@ -5,13 +5,12 @@ Author: Sailendra */
 #include <bits/stdc++.h>
 using namespace std;
 
-int tms=0;
-void print_name(string name){
+void print_name(string name, int tms){
     if(tms==5) return;
 
     cout<<name<<endl;
     tms++;
-    print_name(name);
+    print_name(name, tms++);
 
 }
 
@@ -21,7 +20,7 @@ int main()
     freopen("output.txt", "w", stdout);
 
     string name; cin>>name;
-    print_name(name);
+    print_name(name, 0);
 
 
     return 0;
